@@ -160,11 +160,9 @@ header {
 /* Hero styles */
 
 .hero {
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
   color: var(--white-color);
   background-color: var(--dark-bg-color);
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -174,18 +172,17 @@ header {
   background-size: contain;
 }
 
-.hero-container {
-  width: 696px;
-  text-align: center;
-}
-
 .hero h1 {
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hero button {
@@ -360,6 +357,7 @@ header {
 .filter {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter :not(:first-child) {
@@ -393,20 +391,20 @@ header {
 /* Portfolio styles */
 
 .portfolio-list {
-  margin-top: calc(50px - var(--portfolio-item-gap));
+  margin-top: calc(-1 * var(--portfolio-item-gap));
   margin-left: calc(-1 * var(--portfolio-item-gap));
 
   display: flex;
   flex-wrap: wrap;
-  flex-basis: calc (100%/3 - var(--portfolio-item-gap));
 }
 
 .portfolio-item {
-  margin-top: 30px;
+  margin-top: var(--portfolio-item-gap);
   margin-left: var(--portfolio-item-gap);
   background: var(--white-color);
 
   border-bottom: 1px solid #eeeeee;
+  flex-basis: calc (100%/3 - var(--portfolio-item-gap));
 }
 
 .portfolio-item:hover {
@@ -416,8 +414,8 @@ header {
 
 .portfolio-descriptions {
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  /* border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee; */
 }
 
 .portfolio-descriptions h2 {
